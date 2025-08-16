@@ -6,6 +6,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 // API
+$route['api/info'] = 'api/info/index';
+
 $route['api/v1/auth/login']             = 'api/auth/login';
 $route['api/v1/users']['GET']           = 'api/users/index';
 $route['api/v1/users']['POST']          = 'api/users/store';
