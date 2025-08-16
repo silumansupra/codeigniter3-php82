@@ -8,7 +8,9 @@
 		"source": "https://github.com/pocketarc/codeigniter"
 	},
 	"require": {
-		"php": ">=5.4.8"
+		"php": ">=5.4.8",
+		"chriskacerguis/codeigniter-restserver": "^3.1",
+        "firebase/php-jwt": "^6.10"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
@@ -23,10 +25,12 @@
 		],
 		"post-update-cmd": [
 			"sed -i s/name{0}/name[0]/ vendor/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStream.php"
-		]
+		],
+        "create-module": "php create_module.php"
 	},
 	"require-dev": {
 		"mikey179/vfsstream": "1.6.*",
-		"phpunit/phpunit": "4.* || 5.* || 9.*"
+		"phpunit/phpunit": "4.* || 5.* || 9.*",
+        "firebase/php-jwt": "^6.10"
 	}
 }

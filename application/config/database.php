@@ -11,7 +11,7 @@ $db['default'] = array(
 
 	'username' => 'root',
 	'password' => '',
-	'database' => 'local_ci3develop',
+	'database' => 'testing_phpci3_82',
 
 	'dbdriver'     => 'mysqli',
 	'dbprefix'     => '',

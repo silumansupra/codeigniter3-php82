@@ -9,6 +9,8 @@ $autoload['libraries'] = array(
 );
 $autoload['drivers']   = array('session');
 $autoload['helper']    = array(
+	'Jwt',
+	'global',
 	'url',
 	'form',
 );
