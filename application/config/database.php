@@ -9,9 +9,9 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'port'     => '3306',
 
-	'username' => 'root',
-	'password' => '',
-	'database' => 'testing_phpci3_82',
+	'username' => 'appdb',
+	'password' => 'passdb',
+	'database' => 'ci3php8x',
 
 	'dbdriver'     => 'mysqli',
 	'dbprefix'     => '',
