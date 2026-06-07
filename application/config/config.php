@@ -4,9 +4,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 date_default_timezone_set('Asia/Jakarta');
 
-// Set Base URL
-$config['base_url']                = "https://" . $_SERVER['HTTP_HOST'];
-$config['base_url']                .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
+$protocol            = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$config['base_url']  = $protocol . "://" . $_SERVER['HTTP_HOST'];
+$config['base_url'] .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
 
 $config['index_page']              = '';
 $config['uri_protocol']            = 'REQUEST_URI';
@@ -34,7 +34,7 @@ $config['encryption_key']          = '636AD97281FBA52E96283AD9A46C9';
 $config['sess_driver']             = 'files';
 $config['sess_cookie_name']        = 'ci_session';
 $config['sess_expiration']         = 7200;
-$config['sess_save_path']          = APPPATH.'cache/sessions/';
+$config['sess_save_path']          = APPPATH . 'cache/sessions/';
 $config['sess_match_ip']           = FALSE;
 $config['sess_time_to_update']     = 300;
 $config['sess_regenerate_destroy'] = FALSE;
@@ -58,5 +58,5 @@ $config['proxy_ips']               = '';
 
 $config['composer_autoload'] = 'vendor/autoload.php';
 $config['modules_locations'] = array(
-	APPPATH . 'apps/' => '../apps/',
+    APPPATH . 'apps/' => '../apps/',
 );

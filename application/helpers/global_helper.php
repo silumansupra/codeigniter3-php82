@@ -47,12 +47,6 @@ function setArray(bool $status = true, string $message = "", array $extra = []):
     return $result;
 }
 
-function loadView($file)
-{
-    $CI = &get_instance();
-    return $CI->load->view($file);
-}
-
 function isEmptyNull($val)
 {
     if ($val === null || empty($val) || $val == "") {
