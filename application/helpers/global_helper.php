@@ -33,17 +33,10 @@ function debug($data, string $type = '', bool $exit = true): void
     }
 }
 
-function setArray(bool $status = true, string $message = "", array $extra = []): array
+function setResponse(bool $success = true, string $message = '', array $extra = []): array
 {
-    $result = [
-        'error'   => $status,
-        'message' => $message,
-    ];
-
-    if (!$status) {
-        $result = array_merge($result, $extra);
-    }
-
+    $result = ['success' => $success, 'message' => $message];
+    if ($success) $result = array_merge($result, $extra);
     return $result;
 }
 
@@ -58,7 +51,7 @@ function isEmptyNull($val)
 
 function setErrorResponse($message = "Error Occured. Please contact system administrator!")
 {
-    return setArray(true, $message);
+    return setResponse(false, $message);
 }
 
 function getPost()
