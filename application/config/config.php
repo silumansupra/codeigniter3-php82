@@ -56,6 +56,8 @@ $config['time_reference']          = 'local';
 $config['rewrite_short_tags']      = FALSE;
 $config['proxy_ips']               = '';
 
+$config['jwt_secret'] = 'ci3-jwt-secret';
+
 $config['composer_autoload'] = 'vendor/autoload.php';
 $config['modules_locations'] = array(
     APPPATH . 'apps/' => '../apps/',

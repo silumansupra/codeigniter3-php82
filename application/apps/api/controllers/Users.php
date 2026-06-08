@@ -5,7 +5,7 @@ class Users extends Api_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('api/User_model', 'users');
+        $this->load->model('api/m_user', 'users');
         $this->load->library('form_validation');
     }
 

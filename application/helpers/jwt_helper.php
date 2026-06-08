@@ -10,7 +10,8 @@ use Firebase\JWT\Key;
 if (!function_exists('jwt_secret')) {
     function jwt_secret()
     {
-        return 'super-secret-CHANGE-ME';
+        $CI = &get_instance();
+        return getenv('JWT_SECRET') ?: $CI->config->item('jwt_secret');
     }
 }
 
